@@ -1,0 +1,17 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:graphics="clr-namespace:FigureMotionApp.Graphics"
+             x:Class="FigureMotionApp.MainPage">
+
+    <Grid RowDefinitions="*, Auto">
+        <GraphicsView x:Name="CanvasView" Grid.Row="0">
+            <GraphicsView.Drawable>
+                <graphics:ShapeDrawable x:Name="MainDrawable"/>
+            </GraphicsView.Drawable>
+        </GraphicsView>
+
+        <Button Text="Додати фігуру" 
+                Clicked="OnAddShapeClicked" 
+                Grid.Row="1" Margin="20"/>
+    </Grid>
+</ContentPage>
